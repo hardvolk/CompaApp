@@ -1,0 +1,14 @@
+<ion-view title="Grupos de Estudio">
+  <ion-content class="has-header" data-tap-disabled="true">
+
+      <div id="map"  data-tap-disabled="true"></div>
+      <!-- Lista de los grupos -->
+      <ion-list>
+        <ion-item ng-repeat="item in Groups.List track by $index" class="item-icon-right">
+          <h2>{{item.SchoolShortName}}</h2>
+          <p>{{item.Day}} - {{item.Hour}}</p>
+          <i class="icon ion-information-circled icon-accessory" ng-click="ShowMoreInfo($index)"></i>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

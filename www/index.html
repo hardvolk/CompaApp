@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+  <title>Compañerimo Estudiantil</title>
+
+  <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    
+    <script src="lib/ng-cordova/dist/ng-cordova.js"></script>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAhxGVQfu_GqB9iIpbK7VpYqcGp4zSQp_g'></script>
+    
+    <!-- Variable global para guardar la ruta al servidor -->
+    <script type="text/javascript">
+      var API_URL = "http://localhost/CompaApp/"; // Cambiar cuando se libre a pruebas con el servidor real
+      //var API_URL = "http://compamonterrey.org.mx/API/";
+      console.log("Servidor en uso: " + API_URL); 
+    </script>
+    
+    <script src="js/app.js"></script>
+    <script src="js/controllers/groups.js"></script>
+    <script src="js/controllers/posts.js"></script>
+    <script src="js/controllers/events.js"></script>
+    <script src="js/controllers/resources.js"></script>
+    <script src="js/controllers/donate.js"></script>
+    <script src="js/controllers/about.js"></script>
+<!--    <script src="js/directives.js"></script>-->
+
+  <style>
+      .box {height:300px;padding: 10px}
+      #map{
+          width: 100%;
+          height: 50%;
+      }
+  </style>      
+</head>
+
+<body ng-app="CompaApp">
+   <ion-nav-view></ion-nav-view>
+</body>
+</html>
